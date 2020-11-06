@@ -1,0 +1,39 @@
+@import "bootstrap";
+
+body { @extend .container; }
+
+body > header { 
+    @extend .page-header;
+    p {
+        @extend .lead;
+    }
+}
+
+body > main {
+    @extend .row;
+    nav {
+        @extend .col-lg-3;
+        ul {
+            @extend .list-group;
+            li {
+                @extend .list-group-item; 
+            }
+        }
+    }
+    article { @extend .col-lg-9 }
+}
+
+.login-form {
+    .field { @extend .form-group;
+      input[type="text"], input[type="password"] {
+           @extend .form-control;
+        }
+  
+      &.remember { @extend .checkbox; }
+    }
+  
+    .actions { @extend .form-group;
+      input[type="submit"] { @extend .btn, .btn-primary; }
+      a { @extend .btn, .btn-warning; }
+    }
+  }
